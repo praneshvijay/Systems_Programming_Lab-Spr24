@@ -1,0 +1,13 @@
+#!/bin/bash
+
+##Generation of the static library
+gcc -Wall -c settype.c
+gcc -Wall -c setops.c
+ar rcs libsetutils.a settype.o setops.o
+
+##Compilation with the static library
+gcc -Wall -L. chocolate.c -lsetutils
+./a.out
+
+gcc -Wall -L. chocolate.c -lsetutils -DSTAT_MODE
+./a.out

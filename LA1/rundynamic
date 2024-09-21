@@ -1,0 +1,15 @@
+#!/bin/bash
+
+##Generation of the dyanmic library
+gcc -Wall -fPIC -c settype.c
+gcc -Wall -fPIC -c setops.c
+gcc -shared -o libsetutils.so settype.o setops.o
+
+export LD_LIBRARY_PATH=$(pwd)
+
+##Compilation with the dynamic library
+gcc -Wall -L. chocolate.c -lsetutils
+./a.out
+
+gcc -Wall -L. chocolate.c -lsetutils -DSTAT_MODE
+./a.out
