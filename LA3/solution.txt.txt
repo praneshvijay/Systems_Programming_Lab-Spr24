@@ -1,0 +1,31 @@
+My roll number = 22CS10013
+
+Secret found = 825242
+
+The secret was found using gdb in interactive mode. The debugger was run using run command. The given guess = 12345 had 11 bits away from the target. The lines of the source code was listed using list command thrice. The value was guess was initialized at line 21. So a breakpoint was set at line 22. The debugger was run till breakpoint. The value of guess was set to 0 using set var guess = 0 command. continue command was given to complete the execution. This was repeated till target was reached.
+
+Based on the number of bits away, the guess was changed. The bits in each position starting from the LSB was fixed based on whether the bits away from the target reduced.
+
+guess = 0 11 bits away
+guess = 1 12 bits away
+guess = 2 10 bits away
+guess = 6 11 bits away
+guess = 8 9 bits away
+guess = 26 8 bits away
+guess = 58 9 bits away
+guess = 186 8 bits away
+guess = 442 7 bits away
+guess = 954 6 bits away
+guess = 1978 5 bits away
+guess = 4026 6 bits away
+guess = 6074 4 bits away
+guess = 14266 5 bits away
+guess = 22458 5 bits away
+guess = 38842 3 bits away
+guess = 104378 4 bits away
+guess = 169914 4 bits away
+guess = 300986 2 bits away
+guess = 825274 1 bits away
+
+guess = 825242
+Wow, you are bang on the target. Well done.
